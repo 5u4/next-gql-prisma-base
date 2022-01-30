@@ -10,7 +10,8 @@
     "check": "tsc --noEmit",
     "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
     "generate": "run-s generate:*",
-    "generate:prisma": "prisma generate"
+    "generate:prisma": "prisma generate",
+    "generate:codegen": "graphql-codegen --config codegen.yml"
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma",

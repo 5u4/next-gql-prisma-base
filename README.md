@@ -73,3 +73,33 @@ With the generation ordering:
    yarn dev
    # and open browser http://localhost:3000/api/graphql
    ```
+
+3. Urql GraphQL Types
+
+   From the back end generaged GraphQL schema `src/graphql/schema.generated.graphql` and the queries we wrote in
+   `src/{pages,components}/**/*.{graphql,js,ts,jsx,tsx}`, we can generate the front end types
+   `src/graphql/codegen.generated.ts`.
+
+   Read more in `codegen.yml` and [GraphQL Code Generator](https://www.graphql-code-generator.com/).
+
+   ```bash
+   yarn generate:codegen
+   ```
+
+_The generated files will be generated again before making a commit. See `.husky/pre-commit`_
+
+You can run all generations with:
+
+```bash
+yarn generate
+```
+
+### Start Next.js App
+
+```bash
+yarn dev
+```
+
+The main page endpoint is at `http://localhost:3000`.
+
+The GraphQL endpoint is at `http://localhost:3000/api/graphql`.
