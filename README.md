@@ -62,3 +62,14 @@ With the generation ordering:
    ```bash
    yarn generate:prisma
    ```
+
+2. GraphQL Schema & Nexus Typings
+
+   After defining the GraphQL schema using `nexus` and `next-nexus` in `src/graphql/schema.ts`,
+   we can generate the GraphQL schema file `src/graphql/schema.generated.graphql` and the nexus typings
+   `types/nexus-typegen.generated.d.ts` by starting the server and initiating a query.
+
+   ```bash
+   yarn dev
+   # and open browser http://localhost:3000/api/graphql
+   ```
