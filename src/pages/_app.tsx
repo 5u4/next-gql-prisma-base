@@ -1,3 +1,4 @@
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Provider } from "urql";
@@ -24,4 +25,4 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
-export default App;
+export default appWithTranslation(App);

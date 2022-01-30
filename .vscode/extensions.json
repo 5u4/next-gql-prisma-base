@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "graphql.vscode-graphql",
     "esbenp.prettier-vscode",
-    "prisma.prisma"
+    "prisma.prisma",
+    "lokalise.i18n-ally"
   ]
 }
