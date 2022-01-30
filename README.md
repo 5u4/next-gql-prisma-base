@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Next.js GraphQL Prisma Base</h1>
-<span>Base repo with [Next.js](https://nextjs.org/), [GraphQL](https://graphql.org/), and [Prisma](https://www.prisma.io/).</span>
+<span>Base repo with <a href="https://nextjs.org/">Next.js</a>, <a href="https://graphql.org/">GraphQL</a>, and <a href="https://www.prisma.io/">Prisma</a>.</span>
 </div>
 
 ## Development
