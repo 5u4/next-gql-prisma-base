@@ -3,5 +3,5 @@
 
 
 type Query {
-  ping: String!
+  ping(withTimestamp: Boolean): String!
 }

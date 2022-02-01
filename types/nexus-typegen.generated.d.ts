@@ -5,6 +5,7 @@
 
 
 import type { Context } from "./../src/graphql/context"
+import type { ValidationSchema } from "~/graphql/plugins/ajvValidatePlugin"
 
 
 
@@ -54,6 +55,11 @@ export interface NexusGenFieldTypeNames {
 }
 
 export interface NexusGenArgTypes {
+  Query: {
+    ping: { // args
+      withTimestamp?: boolean | null; // Boolean
+    }
+  }
 }
 
 export interface NexusGenAbstractTypeMembers {
@@ -119,6 +125,10 @@ declare global {
   interface NexusGenPluginInputTypeConfig<TypeName extends string> {
   }
   interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {
+    /**
+     * Ajv validation function
+     */
+    validate?: ValidationSchema<NexusGenArgTypes[TypeName][FieldName]>
   }
   interface NexusGenPluginInputFieldConfig<TypeName extends string, FieldName extends string> {
   }
