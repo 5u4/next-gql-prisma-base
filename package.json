@@ -7,6 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
+    "postinstall": "yarn generate",
     "check": "tsc --noEmit",
     "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
     "generate": "run-s generate:*",

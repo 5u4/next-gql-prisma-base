@@ -20,6 +20,11 @@ export type Query = {
   ping: Scalars['String'];
 };
 
+
+export type QueryPingArgs = {
+  withTimestamp?: InputMaybe<Scalars['Boolean']>;
+};
+
 export type PingQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -57,7 +62,15 @@ export default {
                 "name": "Any"
               }
             },
-            "args": []
+            "args": [
+              {
+                "name": "withTimestamp",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              }
+            ]
           }
         ],
         "interfaces": []
