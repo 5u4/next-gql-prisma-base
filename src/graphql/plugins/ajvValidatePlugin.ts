@@ -28,14 +28,14 @@ export function ajvValidatePlugin(): NexusPlugin {
     fieldDefTypes,
     onCreateFieldResolver: config => {
       const validate: ValidateFunction | undefined =
-        config.fieldConfig.extensions?.nexus?.config.ajvValidate;
+        config.fieldConfig.extensions?.nexus?.config.validate;
 
       if (!validate) return;
 
       return async (root, args, ctx, info, next) => {
-        const isValid = validate(args);
+        const isValid = await validate(args);
         if (!isValid) {
-          const errors = validate.errors!;
+          const errors = validate.errors;
           throw new UserInputError("Invalid args field", { errors });
         }
 
